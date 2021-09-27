@@ -5,8 +5,10 @@
 {% endblock %}
 
 {% block content %}
+  <section tag="form">
   <form method="post">
     
+    <p>
     <label for="parts">Parts</label>
     <input name="parts" id="parts">
     
@@ -18,7 +20,9 @@
     
     <label for="breed_count">Breed Count</label>
     <input name="breed_count" id="breed_count">
+    </p>
     
+    <p>
     <label for="hp">HP</label>
     <input name="hp" id="hp">
     
@@ -30,14 +34,20 @@
     
     <label for="morale">Morale</label>
     <input name="morale" id="morale">
-    
-    
+    </p>
+    <p>
     <input type="submit" value="Search">
+    </p>
+    
   </form>
+  </section>
+  <section tag="results">
+  {% if results %}
+
+    <p>{{ results }}</p>
+        
+  {% endif %}
+  </section>
+  
 {% endblock %}
 
-{% if g.searched %}
-
-    <li><span>{{ g.results }}</span>
-        
-{% endif %}

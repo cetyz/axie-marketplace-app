@@ -1,12 +1,13 @@
 <!doctype html>
-<title>{% block title %}{% endblock %} - Flaskr</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav>
-  <h1>Axie Marketplace App</h1>
+<title>
+{% block title %}
+{% endblock %}
+</title>
+{#<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">#}
 
-</nav>
 <section class="content">
   <header>
+    <img src="{{ url_for('static', filename='axie_logo.png') }}" alr="Axie Infinity" width="180" height="90">
     {% block header %}{% endblock %}
   </header>
   {% for message in get_flashed_messages() %}
