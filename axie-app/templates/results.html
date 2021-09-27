@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Look for Axies!{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    
+    <label for="parts">Parts</label>
+    <input name="parts" id="parts">
+    
+    <label for="classes">Classes</label>
+    <input name="classes" id="classes">
+    
+    <label for="pureness">Pureness</label>
+    <input name="pureness" id="pureness">
+    
+    <label for="breed_count">Breed Count</label>
+    <input name="breed_count" id="breed_count">
+    
+    <label for="hp">HP</label>
+    <input name="hp" id="hp">
+    
+    <label for="skill">Skill</label>
+    <input name="skill" id="skill">
+    
+    <label for="speed">Speed</label>
+    <input name="speed" id="speed">
+    
+    <label for="morale">Morale</label>
+    <input name="morale" id="morale">
+    
+    
+    <input type="submit" value="Search">
+  </form>
+  
+
+
+    <div class="flash">{{ message }}</div>
+        
+
+  
+  
+{% endblock %}
+
