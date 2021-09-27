@@ -1,0 +1,5 @@
+requests
+json
+flask
+sqlite3
+click
