@@ -14,7 +14,7 @@ bp = Blueprint('scrape',
                # url_prefix='/auth'
                )
 
-@bp.route('/scrape', methods=(['GET', 'POST']))
+@bp.route('/', methods=(['GET', 'POST']))
 def scrape():
     # if you would like to search...
     if request.method == 'POST':  
